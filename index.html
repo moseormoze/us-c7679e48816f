@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#ffffff">
+<title>US 2026 · מדריך הטיול</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#fff}
+#us-guide{--guide-bg:#fff;--guide-ink:#202226;--guide-soft:#69717d;--guide-line:#e8eaf0;--guide-blue:#2455d6;--guide-pale:#f3f6fc;--guide-gap:22px;direction:rtl;font-family:Heebo,sans-serif;background:var(--guide-bg);color:var(--guide-ink);max-width:440px;margin:0 auto;min-height:100vh}
+#us-guide *{box-sizing:border-box}
+#us-guide button{font-family:inherit;cursor:pointer;color:inherit;background:none;border:0;padding:0;font-size:14px;-webkit-tap-highlight-color:transparent}
+#us-guide a{color:var(--guide-blue);text-decoration:none}
+.chrome{display:flex;justify-content:space-between;padding:22px var(--guide-gap) 12px;color:var(--guide-soft);font-size:12px}
+.brand{letter-spacing:.12em;direction:ltr;font-weight:500}
+.content{padding:12px var(--guide-gap) 110px}
+h1{font-size:35px;font-weight:700;line-height:1.2;letter-spacing:-1px;margin:8px 0 7px}
+h2{font-size:17px;font-weight:500;margin:26px 0 4px}
+p{margin:0;font-size:14px;line-height:1.6}
+.muted,.eyebrow,.small{color:var(--guide-soft)}.eyebrow,.small{font-size:12px}
+.dates{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--guide-line);margin:24px calc(-1*var(--guide-gap)) 8px;padding:0 var(--guide-gap) 13px;scroll-snap-type:x mandatory}
+.dates::-webkit-scrollbar{display:none}
+.dates button{flex:0 0 44px;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;min-height:46px;color:var(--guide-soft);font-size:12px;line-height:1.4}
+.dates b{font-size:17px;font-weight:500}
+.dates button[aria-pressed=true]{color:var(--guide-blue);border-bottom:2px solid var(--guide-blue);margin-bottom:-14px;padding-bottom:13px}
+.dates .city{flex:0 0 auto;align-self:center;font-size:10px;color:var(--guide-soft);writing-mode:vertical-rl;padding:0 2px}
+.stop{display:grid;grid-template-columns:51px minmax(0,1fr);gap:12px;padding:17px 0;border-bottom:1px solid var(--guide-line)}
+.time{font-size:12px;color:var(--guide-soft);padding-top:3px;font-variant-numeric:tabular-nums}
+.stop h3{font-size:15px;font-weight:500;margin:0}
+.stop p{font-size:13px;color:var(--guide-soft);margin-top:4px}
+.tag{display:inline-block;font-size:11px;margin-inline-start:7px;color:var(--guide-soft)}
+.tag.ok{color:var(--guide-blue)}.tag.key{color:#b4531d;font-weight:500}
+details summary{list-style:none;cursor:pointer}details summary::-webkit-details-marker{display:none}
+details summary h3::after{content:" ⌄";color:var(--guide-soft);font-size:12px}
+details[open] summary h3::after{content:" ⌃"}
+.note{padding:13px 14px;background:var(--guide-pale);margin-top:18px;border-radius:8px;font-size:13px;line-height:1.6}
+.flight{padding:16px 0;border-bottom:1px solid var(--guide-line)}
+.route{direction:ltr;text-align:left;font-size:17px;font-weight:500;margin-top:4px;font-variant-numeric:tabular-nums}
+.route span{color:var(--guide-soft);font-weight:400}
+ul.list{margin:8px 0 0;padding:0;list-style:none}
+ul.list li{padding:13px 0;border-bottom:1px solid var(--guide-line);font-size:14px;line-height:1.6}
+ul.list li small{display:block;color:var(--guide-soft);font-size:12px}
+.bottom{position:fixed;bottom:0;left:0;right:0;max-width:440px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--guide-line);padding:10px 8px calc(12px + env(safe-area-inset-bottom));background:#fff}
+.bottom button{display:flex;flex-direction:column;align-items:center;gap:5px;min-height:47px;color:var(--guide-soft);font-size:12px}
+.bottom button[aria-pressed=true]{color:var(--guide-blue);font-weight:500}
+.bottom svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tag.wait{color:#a8640f}.tag.no{color:#9aa0aa;text-decoration:line-through}
+.stop.rej h3{color:#9aa0aa}.stop.key h3{color:#b4531d}
+.ev{display:inline-block;font-size:12px;margin-top:5px}
+.stop .sub{font-size:12px;color:var(--guide-soft);margin-top:3px}
+.pitch{border:1px solid var(--guide-line);border-radius:10px;margin-top:12px;overflow:hidden}
+.pitch>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:15px 16px;font-size:15px;font-weight:500}
+.pitch>summary::-webkit-details-marker{display:none}
+.pitch>summary::after{content:'+';font-weight:400;color:var(--guide-soft)}
+.pitch[open]>summary::after{content:'−'}
+.pitch .body{padding:0 16px 16px}
+.pitch .en{direction:ltr;text-align:left;font-size:15px;line-height:1.55;color:var(--guide-ink);white-space:pre-line}
+.pitch .en p{font-size:15px;line-height:1.55;margin:0 0 10px}
+.pitch .en p:last-child{margin-bottom:0}
+.content{padding-bottom:130px}
+.pitch .tip{margin:12px 16px 16px;padding:12px 13px;background:var(--guide-pale);border-radius:8px;font-size:12px;line-height:1.55;color:var(--guide-soft)}
+.pitch .tip strong{color:var(--guide-ink);font-weight:500}
+</style></head><body>
+<div id="us-guide" aria-label="מדריך הטיול">
+<header class="chrome"><span class="brand">US / 2026</span><span dir="ltr">16.10 — 25.10</span></header>
+<main class="content">
+<section data-screen="trip">
+ <div class="eyebrow" id="day-label"></div><h1 id="day-title"></h1><p class="muted" id="day-intro"></p>
+ <div class="dates" id="day-picker" aria-label="בחירת יום"></div>
+ <p class="small" id="snap" style="margin-top:10px"></p>
+ <div id="day-stops"></div>
+</section>
+<section data-screen="pitch" hidden>
+ <div class="eyebrow">משפטים לזכור · לא נאום אחד</div><h1>Pitch</h1><p class="muted">כרטיסים נפרדים לשינון. פתחו אחד בכל פעם.</p>
+
+ <details class="pitch" open>
+  <summary>ההיכרות</summary>
+  <div class="body en">
+   <p>Hi, I’m Eilon. I’m a product lead at Cache.</p>
+   <p>We’re building AI for personal finance.</p>
+   <p>It’s my first time here, and I’m curious to hear what actually works for people beyond the demos.</p>
+   <p>What are you working on?</p>
+  </div>
+  <div class="tip"><strong>תרגול קשה לטיסה:</strong> <span dir="ltr">“I’m curious to hear / what actually works for people / beyond the demos.”</span> · להתמקד ב־1+2 בטיסה.</div>
+ </details>
+
+ <details class="pitch">
+  <summary dir="ltr">What does Cache do?</summary>
+  <div class="body en">
+   <p>We help banks and credit unions bring AI-powered personal finance tools into their apps. So their customers can better understand and manage their money, right where they already bank.</p>
+  </div>
+ </details>
+
+ <details class="pitch">
+  <summary dir="ltr">How does it work?</summary>
+  <div class="body en">
+   <p>We provide embeddable tools and APIs, so banks can offer these features without building everything from scratch.</p>
+  </div>
+ </details>
+
+ <details class="pitch">
+  <summary>הרקע ומה מעניין אותך</summary>
+  <div class="body en">
+   <p>I’ve been working in fintech for about eight years. What interests me now is how we turn AI into something people actually find useful in their everyday financial lives.</p>
+  </div>
+ </details>
+
+ <details class="pitch">
+  <summary>זווית להמשך שיחה</summary>
+  <div class="body en">
+   <p>One thing we’re working through is how to give people real value as soon as they connect their accounts. What would make them want to come back?</p>
+  </div>
+ </details>
+
+ <details class="pitch">
+  <summary>שאלות לשלוף</summary>
+  <div class="body en">
+   <p>What are you focused on at the moment?</p>
+   <p>What’s been harder than you expected?</p>
+   <p>What have you learned from your users so far?</p>
+  </div>
+ </details>
+
+ <details class="pitch">
+  <summary>סיום ושמירת קשר</summary>
+  <div class="body en">
+   <p>It was really nice talking with you. Shall we connect on LinkedIn?</p>
+  </div>
+ </details>
+</section>
+<section data-screen="details" hidden>
+ <div class="eyebrow">Delta · הוזמן · ESTA מאושר</div><h1>פרטים</h1>
+ <h2>טיסות</h2>
+ <div class="flight"><div class="eyebrow">שישי 16.10 · הלוך</div><div class="route">TLV 11:35 <span>→ JFK →</span> LAS 22:27</div><p class="small">נחיתה בלאס וגאס בשעון מקומי</p></div>
+ <div class="flight"><div class="eyebrow">רביעי 21.10 · לילה לניו יורק</div><div class="route">LAS 23:37 <span>→</span> JFK 07:30</div><p class="small">נחיתה חמישי 22.10 בבוקר</p></div>
+ <div class="flight"><div class="eyebrow">שבת 24.10 · חזרה</div><div class="route">JFK 17:20 <span>→ CDG →</span> TLV 14:15</div><p class="small">נחיתה ראשון 25.10</p></div>
+ <h2>לינה</h2>
+ <ul class="list">
+  <li><b>לאס וגאס · 16–21.10</b><span class="tag wait">ממתין לאישור לירן</span><small>לירן מזמין (כנראה Treasure Island). כתובת תתווסף אחרי האישור.</small></li>
+  <li><b>ניו יורק · The Local NY Hostel</b><span class="tag ok">הוזמן</span><small>לילות 22–24.10 · ‎$285.55 · ביטול חינם עד שני 19.10 23:59 שעון NY · <a href="https://www.google.com/maps/search/?api=1&query=The+Local+NY+Hostel" target="_blank" rel="noopener">מפה</a></small></li>
+ </ul>
+ <p class="small" style="margin-top:14px">כרטיס Money20/20 · ממתין ללירן</p>
+</section>
+</main>
+<nav class="bottom" aria-label="ניווט">
+ <button data-tab="trip"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>לו״ז</button>
+ <button data-tab="pitch"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Pitch</button>
+ <button data-tab="details"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>פרטים</button>
+</nav>
+</div>
+<script>
+(()=>{
+const EV={"18": [{"t": "12:00", "h": "TWIF Stablecoin Day (Aleo, Chainalysis, Meld, Persona)", "u": "https://luma.com/1yhb99bu", "s": "ממתין לאישור"}, {"t": "13:15", "h": "The Big Dig with Totavi", "u": "https://luma.com/bhab45ze", "s": "ממתין לאישור"}, {"t": "15:00", "h": "Money 20/20 Banker Led Forum", "u": "https://luma.com/money2020bankerledform", "s": "ממתין לאישור"}, {"t": "16:30", "h": "VGS Vault Lounge (יום א׳)", "u": "https://info.verygoodsecurity.com/vault-lounge", "s": "אושר"}, {"t": "17:00", "h": "Money 20/20 Happy Hour at Electra Lounge", "u": "https://luma.com/themis-hha4", "s": "ממתין לאישור"}, {"t": "17:00", "h": "The Great Wealth Transfer (Fintech Is Femme)", "u": "https://luma.com/Great-Wealth-Transfer-M2020-2026", "s": "אושר", "k": 1}, {"t": "17:30", "h": "Microblink & Kasada Opening Night HH", "u": "https://microblink.com/resources/campaigns/opening-night-happy-hour-at-sushisamba-hosted-by-microblink-and-kasada/", "s": "נשלח"}, {"t": "17:30", "h": "Uncharted Waters (Persona, Crossmint, Mastercard, OpenFX, Circle)", "u": "https://luma.com/unchartedwaters-trustedtransfers", "s": "אושר"}, {"t": "18:00", "h": "TWIF x Mercor: Executive AI Reception", "u": "https://luma.com/mercorm202026", "s": "ממתין לאישור"}, {"t": "18:30", "h": "TWIF x SEON Fraud & Risk Leaders Dinner", "u": "https://luma.com/LV-1018", "s": "ממתין לאישור"}, {"t": "18:30", "h": "Akoya & Nova Credit Dinner Discussion", "u": "https://events.novacredit.com/money2020-2026-dinner-discussion-akoya-novacredit", "s": "נשלח"}, {"t": "19:00", "h": "Socure & LoanPro: Chef-led tasting", "u": "https://events.socure.com/sic-money-2020", "s": "נשלח"}, {"t": "19:00", "h": "Fin & Juice", "u": "https://luma.com/e0hcbe24", "s": "ממתין לאישור"}, {"t": "19:00", "h": "Payments Distilled (PayNearMe)", "u": "https://home.paynearme.com/events/payments-distilled-money2020/", "s": "נשלח"}, {"t": "19:00", "h": "Private Dinner @ Money2020", "u": "https://luma.com/fiat-gwxd", "s": "רשימת המתנה", "k": 1}, {"t": "21:00", "h": "Fintech Luminaires (Alloy Labs, Cache ספונסר)", "u": "https://luma.com/xfb16kcu", "s": "אושר"}], "19": [{"t": "07:30", "h": "Strativ Run Club", "u": "https://luma.com/0el4mad4", "s": "אושר"}, {"t": "08:00", "h": "Morning Aperitivo with Unit", "u": "https://luma.com/ni1gmo3v", "s": "רשימת המתנה"}, {"t": "10:30", "h": "Brainfood Roundtable", "u": "https://luma.com/pp03tiuc", "s": "נדחה"}, {"t": "11:00", "h": "Annual Money 20/20 Luncheon (TabaPay)", "u": "https://luma.com/3cwtc821", "s": "נדחה"}, {"t": "11:30", "h": "Restive Luncheon w/ Intuit Ventures", "u": "https://luma.com/kqfr0gpx", "s": "רשימת המתנה"}, {"t": "11:30", "h": "Poolside Lunch with Illuminate & HSBC", "u": "https://luma.com/eo08vcdw", "s": "ממתין לאישור"}, {"t": "14:00", "h": "Fine-Tuning Fintech (Foundation Capital)", "u": "https://luma.com/jy2bbr2q", "s": "ממתין לאישור"}, {"t": "16:00", "h": "HOLD @ Money20/20", "u": "https://luma.com/tp3y65uy", "s": "אושר"}, {"t": "16:30", "h": "Liquid Assets (Mesh)", "u": "https://luma.com/liquid-assets-at-money2020", "s": "ממתין לאישור"}, {"t": "16:45", "h": "TWIF, Cambr & Klaros: Bank Leaders", "u": "https://luma.com/CambrM202026", "s": "ממתין לאישור"}, {"t": "17:00", "h": "Cocktails with Socure & Baselayer", "u": "https://events.socure.com/money-2020/events/happy-hour", "s": "נשלח"}, {"t": "17:30", "h": "Executive Dinner at Nobu", "u": "https://luma.com/m2020-nobu-exec-dinner", "s": "אושר"}, {"t": "17:30", "h": "DWT & FTA", "u": "https://web.cvent.com/event/a083611f-e840-4ee2-bb6b-7c067a4e71be/register", "s": "אושר"}, {"t": "17:30", "h": "CryptoMondays Vegas", "u": "https://luma.com/yj9xk3yr", "s": "אושר"}, {"t": "17:30", "h": "TWIF & Checker: HH and Whiskey Tasting", "u": "https://luma.com/7w12th4d", "s": "ממתין לאישור"}, {"t": "18:00", "h": "Payroc + PAX After Hours", "u": "https://luma.com/qx69cto7", "s": "ממתין לאישור"}, {"t": "18:00", "h": "Flight Club with Rain", "u": "https://luma.com/flightclubwithrain", "s": "ממתין לאישור"}, {"t": "19:00", "h": "Column Bank Party + DJ Set", "u": "https://luma.com/wyfd6rqv", "s": "אושר"}, {"t": "19:00", "h": "The T+0 Dinner", "u": "https://luma.com/0ddmn81e", "s": "ממתין לאישור"}, {"t": "19:00", "h": "Stablecon & OpenFX: Stable Salon", "u": "https://luma.com/OpenFXM202026", "s": "ממתין לאישור"}, {"t": "19:30", "h": "Crypto Ignite: Vegas Executive Night", "u": "https://luma.com/nj4h7cb6", "s": "אושר"}, {"t": "20:15", "h": "Euronet, CoreCard & Ren Dinner", "u": "https://luma.com/e71rkdjj", "s": "נדחה"}, {"t": "21:00", "h": "FinTech After Dark (Synctera, Finix)", "u": "https://luma.com/g9ziip0n", "s": "אושר"}], "20": [{"t": "07:15", "h": "Stripe Running Club", "u": "https://luma.com/cbgtr566", "s": "אושר", "n": "הוזז מיום ב׳"}, {"t": "08:00", "h": "Money 20/20 Morning Miles", "u": "https://luma.com/6rnyj7gc", "s": "אושר", "n": "הריצה שבחר"}, {"t": "08:00", "h": "Clocktower x Splitwise Run Club", "u": "https://luma.com/pryjc598", "s": "אושר"}, {"t": "08:00", "h": "Coffee, Donuts & Payments (TabaPay)", "u": "https://luma.com/t54modwc", "s": "רשימת המתנה"}, {"t": "09:00", "h": "Synchrony + a16z: AI and the Enterprise Breakfast", "u": "https://luma.com/kdb52lnw", "s": "נדחה"}, {"t": "13:00", "h": "Afternoon Maxxing: Licensing & Compliance AMA", "u": "https://luma.com/dzy261gl", "s": "אושר"}, {"t": "13:30", "h": "Merkle Science Meet", "u": "https://luma.com/yqb3o4cs", "s": "אושר"}, {"t": "14:00", "h": "Fintech Marketing HH (Mint Studios)", "u": "https://luma.com/1gf4jetc", "s": "אושר"}, {"t": "16:30", "h": "VGS Vault Lounge (יום ג׳)", "u": "https://info.verygoodsecurity.com/vault-lounge", "s": "אושר"}, {"t": "17:00", "h": "Astra + Visa Payments HH", "u": "https://luma.com/8ste17ee", "s": "ממתין לאישור"}, {"t": "17:30", "h": "Turnkey + Lightspark HH", "u": "https://luma.com/dt73awy1", "s": "אושר"}, {"t": "18:00", "h": "Money Moves & Martinis (Rain)", "u": "https://luma.com/moneymovesandmartinisrain", "s": "ממתין לאישור"}, {"t": "18:00", "h": "AI After Dark (Unit21)", "u": "https://www.unit21.ai/ai-after-mixer", "s": "נשלח"}, {"t": "20:00", "h": "Taktile Happy Hour", "u": "https://luma.com/taktile-m2020-happyhour", "s": "ממתין לאישור"}, {"t": "20:30", "h": "Last Call at The Venetian (Spade)", "u": "https://luma.com/du7xl81g", "s": "ממתין לאישור"}]};
+const days=[
+ {d:16,w:'ו׳',city:'וגאס',label:'שישי · 16.10 · הגעה',title:'הגעה ללאס וגאס',intro:'נחיתה ב־LAS ב־22:27. ישר למלון ולישון.'},
+ {d:17,w:'ש׳',label:'שבת · 17.10 · לאס וגאס',title:'יום חופשי',intro:'להתאקלם לפני הכנס. אופציה: North Premium Outlets.'},
+ {d:18,w:'א׳',label:'ראשון · 18.10 · לאס וגאס',title:'Money20/20 · יום 1',intro:'כל האירועים שנרשמתי אליהם. שעון וגאס.',ev:'18'},
+ {d:19,w:'ב׳',label:'שני · 19.10 · לאס וגאס',title:'Money20/20 · יום 2',intro:'כל האירועים שנרשמתי אליהם. שעון וגאס.',ev:'19'},
+ {d:20,w:'ג׳',label:'שלישי · 20.10 · לאס וגאס',title:'Money20/20 · יום 3',intro:'כל האירועים שנרשמתי אליהם. שעון וגאס.',ev:'20'},
+ {d:21,w:'ד׳',label:'רביעי · 21.10 · לאס וגאס',title:'יום יציאה',intro:'טיסת לילה LAS 23:37 → JFK, נחיתה חמישי 07:30.'},
+ {d:22,w:'ה׳',city:'NY',label:'חמישי · 22.10 · ניו יורק',title:'ניו יורק',intro:'נחיתה ב־JFK 07:30. צ׳ק־אין ב־The Local NY.'},
+ {d:23,w:'ו׳',label:'שישי · 23.10 · ניו יורק',title:'ניו יורק',intro:'יום פתוח.'},
+ {d:24,w:'ש׳',label:'שבת · 24.10 · ניו יורק',title:'טיסת חזרה',intro:'JFK 17:20 → CDG → TLV.'},
+ {d:25,w:'א׳',city:'TLV',label:'ראשון · 25.10',title:'נחיתה בתל אביב',intro:'נחיתה 14:15.'}];
+const cls={'אושר':'ok','רשימת המתנה':'wait','נדחה':'no'};
+const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let day=2;
+const picker=$('day-picker');
+picker.innerHTML=days.map((x,i)=>(x.city?`<span class="city">${x.city}</span>`:'')+`<button type="button" data-i="${i}" aria-pressed="false"><span>${x.w}</span><b>${x.d}</b></button>`).join('');
+function render(){const x=days[day];$('day-label').textContent=x.label;$('day-title').textContent=x.title;$('day-intro').textContent=x.intro;
+ picker.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.i===day));
+ const L=x.ev?EV[x.ev]:[];
+ $('snap').textContent=L.length?`${L.length} אירועים · snapshot 15.10.2026 — סטטוסים משתנים`:'';
+ $('day-stops').innerHTML=L.map(e=>`<div class="stop${e.s==='נדחה'?' rej':''}${e.k?' key':''}"><div class="time">${esc(e.t)}</div><div>
+  <h3><bdi dir="ltr">${esc(e.h)}</bdi>${e.k?'<span class="tag key">חשוב</span>':''}<span class="tag ${cls[e.s]||''}">${esc(e.s)}</span></h3>
+  ${e.n?`<div class="sub">${esc(e.n)}</div>`:''}<a class="ev" href="${esc(e.u)}" target="_blank" rel="noopener">לאירוע ↗</a></div></div>`).join('');
+ picker.querySelector(`[data-i="${day}"]`).scrollIntoView({inline:'center',block:'nearest'});}
+picker.addEventListener('click',e=>{const b=e.target.closest('button');if(b){day=+b.dataset.i;render();}});
+const tabs=['trip','pitch','details'];
+function tab(t){document.querySelectorAll('[data-screen]').forEach(s=>s.hidden=s.dataset.screen!==t);
+ document.querySelectorAll('.bottom button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.tab===t));history.replaceState(null,'','#'+t);scrollTo(0,0);}
+document.querySelector('.bottom').addEventListener('click',e=>{const b=e.target.closest('button');if(b)tab(b.dataset.tab);});
+render();tab(tabs.includes(location.hash.slice(1))?location.hash.slice(1):'trip');
+})();
+</script></body></html>
